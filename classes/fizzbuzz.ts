@@ -1,8 +1,6 @@
 import { Interceptor } from '../models/interceptor.model';
 
 export class FizzBuzz {
-  private static readonly index = 0;
-
   constructor(
     private endAt = 150,
     private interceptors: Interceptor[] = [
@@ -64,11 +62,12 @@ export class FizzBuzz {
       return;
     }
 
-    let iterator = FizzBuzz.index;
+    let iterator = 0;
     while (true) {
       if (iterator === this.endAt) {
         break;
       }
+
       iterator++;
       const localInterceptors = this.interceptors.filter(i => this.findFactors(iterator).includes(i.insteadOf));
 
