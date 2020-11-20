@@ -19,5 +19,5 @@ const newInterceptors: Interceptor[] = [
     say: 'xD'
   },
 ];
-const fb = new FizzBuzz(1156, newInterceptors);
+const fb = new FizzBuzz(150, newInterceptors);
 fb.fb();
